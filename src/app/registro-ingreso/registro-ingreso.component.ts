@@ -25,7 +25,7 @@ private  message: string="";
     this.isValid = this.registroIngresoService.validate(this.ingreso);
     if(this.isValid){
       this.registroIngresoService.save(this.ingreso).subscribe(res=>{
-this.router.navigate(['/ingresoComponent'])
+this.router.navigate(['/IngresoComponent'])
       });
     }else{
       this.message="Los campos con * son obligatorios";
