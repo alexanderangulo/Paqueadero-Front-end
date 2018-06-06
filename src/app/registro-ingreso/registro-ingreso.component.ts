@@ -1,8 +1,11 @@
+import { OK } from './../parqueadero.entity/httpstatus';
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import { RegistroIngresoService} from './registro-ingreso.service';
 import { Ingresoentity } from './../parqueadero.entity/ingreso';
+import { error } from 'protractor';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -21,13 +24,27 @@ private  message: string="";
 
   ngOnInit() {
   }
-  public save():void{
+  public save(){
     this.isValid = this.registroIngresoService.validate(this.ingreso);
     if(this.isValid){
-      this.registroIngresoService.save(this.ingreso).subscribe(res=>{
-this.router.navigate(['/IngresoComponent'])
-      });
-    }else{
+      this.registroIngresoService.save(this.ingreso).subscribe(res => {
+        swal({title: 'Factura ',
+        text: ''.concat(
+          `Tipo de vehiculo ${res}
+          
+          `)}
+        );
+        console.log(res);
+        
+          }, error =>{
+            swal({
+              title: 'Guardar',
+              text: error.error.text
+            }).then( () => {
+              location.reload()
+            });
+          });
+      } else{
       this.message="Los campos con * son obligatorios";
     }
 

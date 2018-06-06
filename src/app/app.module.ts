@@ -9,16 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { RegistroIngresoComponent } from './registro-ingreso/registro-ingreso.component';
-import { TasaRepresentativaComponent } from './tasa-representativa/tasa-representativa.component';
-import { FacturaIngresoComponent } from './factura-ingreso/factura-ingreso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IngresoComponent,
-    RegistroIngresoComponent,
-    TasaRepresentativaComponent,
-    FacturaIngresoComponent
+    RegistroIngresoComponent
   ],
   imports: [
     BrowserModule,

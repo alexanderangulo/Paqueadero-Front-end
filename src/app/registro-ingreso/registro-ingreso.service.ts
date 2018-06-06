@@ -23,12 +23,12 @@ export class RegistroIngresoService {
     if(!ingreso.placa){
       isValid=false;
     }
-    if(!ingreso.cilindraje){
-      isValid=false;
-    }
+   
     return isValid;
   }
-  public save(ingreso:Ingresoentity): Observable<String>{
-  return  this.http.post<String>("http://localhost:9066/registro/addIngreso",ingreso);
-  }
+  public save(ingreso:Ingresoentity): Observable<any>{
+    
+  return  this.http.post("http://localhost:9066/registro/addIngreso", ingreso);
+
+}
 }

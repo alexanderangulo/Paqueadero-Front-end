@@ -1,48 +1,50 @@
+<div style="padding: 15px"></div>
 <div class="card container ">
-
+        
 <h1>Registro Ingreso</h1>
 <div >
     <form class="form-horizontal main-form ">
         <div *ngIf="!isValid" class="alert alert-danger">
             <strong>Danger!</strong> {{message}},
         </div>
-     <!-- 
+      
   <div class="col-auto my-3">
         <label class="mr-sm-3" for="tipoVehiculo">Tipo de Vehiculo</label>
-        <select class="custom-select col-2" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
-            <option selected>Escoje Tipo de Vehiculo</option>
-            <option value="1">Carro</option>
-            <option value="2">Moto</option>
+        <select class="custom-select col-2" name="tipoVehiculo" placeholder="Hola" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
+            <option value="1" name="1">Carro</option>
+            <option value="2" name="2">Moto</option>
         </select>
     </div>
-     -->
+
   
-        <div class="col-auto my-3 row">
+        <!-- <div class="col-auto my-3 row">
 
                 <label for="tipoVehiculo" class="col-sm-3 col-form-label">*Tipo de Vehiculo:</label>
-                <div class="col-2">
-                    <input class="form-control" type="number" value="1" name="tipoVehiculo" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
+                <div class="col-6">
+                    <input class="form-control" type="number" min="1" max="2" value="1" name="tipoVehiculo" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
                 </div>
-            </div>
+            </div> -->
         <div class="col-auto my-3 row">
 
             <label for="placa" class="col-sm-3 col-form-label">*Placa:</label>
-            <div class="col-2">
-                <input class="form-control" type="text" value="NNN455-ZZZ54A" name="placa" id="placa" [(ngModel)]="ingreso.placa">
+            <div class="col-6">
+                <input class="form-control" type="text" name="placa" id="placa" [(ngModel)]="ingreso.placa">
             </div>
         </div>
 
         <div class="col-auto my-3 row">
             <label for="cilindraje" class="col-sm-3 col-form-label">*Cilindraje:</label>
-            <div class="col-2">
-                <input class="form-control" type="number" value="0" name="cilindraje" id="cilindraje" [(ngModel)]="ingreso.cilindraje">
+            <div class="col-6">
+                <input class="form-control" type="number" min="1" value="0" name="cilindraje" id="cilindraje" [(ngModel)]="ingreso.cilindraje">
             </div>
         </div>
         <div class="col-2">
-            <button type="submit" (click)="save()" class="btn btn-success btn-success">*Registro:</button>
+            <button type="submit" (click)="save()" class="btn btn-success btn-success">Registro:</button>
         </div>
+        <div style="padding: 10px"></div>
 
     </form>
 </div>
     
 </div>
+<div style="padding: 10px"></div>
