@@ -10,7 +10,7 @@
       
   <div class="col-auto my-3">
         <label class="mr-sm-3" for="tipoVehiculo">Tipo de Vehiculo</label>
-        <select class="custom-select col-2" name="tipoVehiculo" placeholder="Hola" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
+        <select class="custom-select col-6" name="tipoVehiculo" placeholder="Hola" id="tipoVehiculo" [(ngModel)]="ingreso.tipoVehiculo">
             <option value="1" name="1">Carro</option>
             <option value="2" name="2">Moto</option>
         </select>
@@ -28,7 +28,7 @@
 
             <label for="placa" class="col-sm-3 col-form-label">*Placa:</label>
             <div class="col-6">
-                <input class="form-control" type="text" name="placa" id="placa" [(ngModel)]="ingreso.placa">
+                <input class="form-control" placeholder="EFX05D o DHS546" type="text" name="placa" id="placa" [(ngModel)]="ingreso.placa">
             </div>
         </div>
 
