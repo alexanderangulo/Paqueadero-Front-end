@@ -1,6 +1,18 @@
+
 <div class="container card">
-    <div style="padding: 15px"></div>
-    <button type="button" [routerLink]="['/RegistroIngresoComponent']" class="btn btn-success">Registro</button>
-    <button type="button" [routerLink]="['/IngresoComponent']" class="btn btn-danger">Salida</button>
+        <div class="jumbotron">
+            
+                <h1 align='center'>Parqueadero</h1> 
+            
+              </div>
+    
+    <ul class="nav nav-tabs">
+           
+            <li class="active"><a href="http://localhost:4200/RegistroIngresoComponent"><button type="button"  class="btn ">Registro</button></a></li>
+            <li><a href="http://localhost:4200/IngresoComponent"><button type="button"  class="btn ">Salida</button></a></li>
+          </ul>
+          <!-- <button type="button" [routerLink]="['/RegistroIngresoComponent']" class="btn btn-success">Registro</button>
+          <button type="button" [routerLink]="['/IngresoComponent']" class="btn btn-danger">Salida</button> -->
     <router-outlet></router-outlet>
+ 
 </div>

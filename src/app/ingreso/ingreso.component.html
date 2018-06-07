@@ -1,8 +1,8 @@
 <div style="padding: 15px"></div>
-<h1 align='center'>Ingresos Registrados</h1>
+<h2 align='center'>Ingresos Registrados</h2>
 <div class ="clear"></div>
 <div class="card container ">
-<table class="table" >
+<table class="table " >
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -15,16 +15,19 @@
   </thead>
   <tbody>
     <tr *ngFor="let ingreso of ingreso">
-      <td>{{ingreso.id}}</td>
-      <td>{{ingreso.fechaIngreso|date: 'short'}}</td>
-      <td>{{ingreso.tipoVehiculo}}</td>
-      <td>{{ingreso.placa}}</td>
-      <td>{{ingreso.cilindraje}}</td>
-      <td><button type="submit"(click)="salidaregistro(ingreso.placa)" class="btn btn-danger">Salida</button></td>
+
+          <td>{{ingreso.id}}</td>
+          <td>{{ingreso.fechaIngreso|date: 'short'}}</td>
+          <td>{{ingreso.tipoVehiculo}}</td>
+          <td>{{ingreso.placa}}</td>
+          <td>{{ingreso.cilindraje}}</td>
+          <td><button type="submit"(click)="salidaregistro(ingreso.placa)" class="btn btn-danger">Salida</button></td>
+
     </tr>
   
   </tbody>
 </table>
+
 
 </div>
 <div style="padding: 10px"></div>
